@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin-left: 0; 
+}
+
+.mosaic-background {
+    background-image: url('../img/mosaiconegro2.jpg');
+    background-repeat: repeat;
+}
+
+#countdown {
+    font-weight: bold;
+    color: #000000;
+    margin-right: 20px;
+}
+
+
+.subway {
+    width: 14%;
+}
+
+.hero {
+    background-image: url("../img/hero2.gif");
+    background-size: 100%;
+    height: 91.7vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.hotel {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.seguro {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.mapa {
+    width: 408px;
+}
+
+.pax {
+    width: 300px;
+}
+
+.hotel-seguro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.dias {
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+ @-webkit-keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+
+ .timeline-vertical {
+    position: relative;
+    padding: 20px;
+    border-left: 4px solid #000; /* Línea de tiempo vertical */
+    /* max-width: 400px; Ajusta según tus necesidades */
+    height: 100%; /* Se expande verticalmente */
+    /* Puedes eliminar o ajustar el margen según dónde quieres alinear */
+    margin-left: 0; /* Alineado a la izquierda */
+}
+
+.day {
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 15px;
+}
+
+.day-circle {
+    position: absolute;
+    left: 1px;  /* Ajusta para centrar el círculo */
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #1E73BE;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    z-index: 1;
+}
+
+.day-info {
+    padding-left: 40px; /* Desplaza el texto a la derecha del círculo */
+}
+
+.day-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.day-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.day:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: calc(100% + 40px); 
+    background-color: #EE352E;
+    left: 8px;
+    top: 12px;
+    z-index: 0;  
+}
+
+.day:last-child:before {
+    display: none;
+}
+
+
+.day-circle.red {
+    background-color: #EE352E;
+}
+
+.day-circle.blue {
+    background-color: #0039A6;
+}
+
+.day-circle.green {
+    background-color: #00933C;
+}
+
+.day-info p {
+    display: none;
+}
+
+.timeline-vertical {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.titulo-dia,
+.parrafo-dias,
+.mapa {
+    margin-left: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.links {
+    top: 20px;
+    left: 20px;
+    background-color: #000;
+    padding: 10px;
+    color: white;
+}

@@ -31,7 +31,7 @@ body {
     background-image: url("../img/hero2.gif");
     background-size: 100%;
     height: 91.7vh;
-    width: 100%;
+    max-width: 100%;
     background-repeat: no-repeat;
 }
 
@@ -48,17 +48,29 @@ body {
 }
 
 .mapa {
-    width: 408px;
+    border-radius: 5px;    
+    border: 3px solid red;
+    width: 306px;
+    height: 305px;
+}
+
+.mapa-hotel {
+    border-radius: 5px;    
+    border: 3px solid #00933C;
+    width: 306px;
+    height: 305px;
 }
 
 .pax {
-    width: 300px;
+    max-width: 300px;
+    border-radius: 5px;    
+    border: 3px solid #00933C;
 }
 
 .hotel-seguro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
+    /* place-items: center; */
 }
 
 .dias {
@@ -66,9 +78,7 @@ body {
     margin-left: 40px;
 }
 
- @-webkit-keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
-
- .timeline-vertical {
+.timeline-vertical {
     position: relative;
     padding: 20px;
     border-left: 4px solid #000; /* Línea de tiempo vertical */
@@ -164,4 +174,14 @@ html {
     background-color: #000;
     padding: 10px;
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 38vh;
+    }
+
+    .hotel-seguro {
+        grid-template-columns: 1fr;
+    }
 }

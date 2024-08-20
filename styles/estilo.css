@@ -22,7 +22,6 @@ body {
     margin-right: 20px;
 }
 
-
 .subway {
     width: 14%;
 }
@@ -33,6 +32,17 @@ body {
     height: 91.7vh;
     max-width: 100%;
     background-repeat: no-repeat;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.2s;
+}
+
+.links {
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    color: white;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.5s;
 }
 
 .hotel {
@@ -71,6 +81,8 @@ body {
 .hotel-seguro {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.5s;
 }
 
 .dias {
@@ -159,31 +171,61 @@ body {
 .timeline-vertical {
     overflow-y: auto;
     scroll-behavior: smooth;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.3s;
 }
 
 .titulo-dia,
 .parrafo-dias,
 .mapa {
     margin-left: 40px;
+    transition: all 0.3s;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.5s;
+}
+
+@keyframes swing-in-top-bck {
+    0% {
+      transform: rotateX(70deg);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+
+.parrafo-dias:hover {
+    color: #EE352E;
+}
+
+details {
+    transition: all 0.2s;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.links {
-    top: 20px;
-    left: 20px;
-    padding: 10px;
-    color: white;
-}
-
 @media screen and (max-width: 600px) {
     .hero {
-        height: 38vh;
+        height: 32vh;
+    }
+
+    .subway {
+        width: 8%;
     }
 
     .hotel-seguro {
         grid-template-columns: 1fr;
+        animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        animation-delay: 0.4s;
+    }
+
+    .seccion-seguro {
+        animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        animation-delay: 0.8s;
     }
 }

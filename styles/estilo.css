@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: azure;
     font-family: 'Helvetica', 'Arial', sans-serif;
@@ -12,7 +16,7 @@ body {
 }
 
 .mosaic-background {
-    background-image: url('../img/mosaiconegro2.jpg');
+    background-image: url('../img/fondoNY2.jpg');
     background-repeat: repeat;
 }
 
@@ -60,7 +64,7 @@ body {
 .mapa {
     margin-bottom: 15px;
     border-radius: 5px;    
-    border: 3px solid red;
+    border: 3px solid #EE352E;
     width: 306px;
     height: 305px;
 }
@@ -93,11 +97,9 @@ body {
 .timeline-vertical {
     position: relative;
     padding: 20px;
-    border-left: 4px solid #000; /* Línea de tiempo vertical */
-    /* max-width: 400px; Ajusta según tus necesidades */
-    height: 100%; /* Se expande verticalmente */
-    /* Puedes eliminar o ajustar el margen según dónde quieres alinear */
-    margin-left: 0; /* Alineado a la izquierda */
+    border-left: 4px solid #000; 
+    height: 100%; 
+    margin-left: 0;
 }
 
 .day {
@@ -108,7 +110,7 @@ body {
 
 .day-circle {
     position: absolute;
-    left: 1px;  /* Ajusta para centrar el círculo */
+    left: 1px;
     top: 0;
     width: 24px;
     height: 24px;
@@ -119,7 +121,7 @@ body {
 }
 
 .day-info {
-    padding-left: 40px; /* Desplaza el texto a la derecha del círculo */
+    padding-left: 40px;
 }
 
 .day-info h4 {
@@ -205,11 +207,18 @@ details {
     transition: all 0.2s;
 }
 
-html {
-    scroll-behavior: smooth;
+.footer-img {
+    background-image: url("../img/footer.jpg");
+    background-size: 100%;
+    height: 20vh;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    animation: swing-in-top-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    animation-delay: 0.6s;
 }
 
 @media screen and (max-width: 600px) {
+    
     .hero {
         height: 32vh;
     }

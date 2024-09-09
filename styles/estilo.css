@@ -203,6 +203,11 @@ body {
     color: #EE352E;
 }
 
+.anotaciones {
+    margin-left: 40px;
+    color: #cccccc;
+}
+
 details {
     transition: all 0.2s;
 }
